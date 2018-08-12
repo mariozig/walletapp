@@ -21,6 +21,11 @@
     <%= form.file_field :driver_license, class: "form-control" %>
   </div>
 
+  <div class="field">
+    <%= form.label :credit_cards %>
+    <%= form.file_field :credit_cards, multiple: true, class: 'form-control' %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
