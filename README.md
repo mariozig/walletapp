@@ -1,24 +1,5 @@
-# README
+# Active Storage Attachment Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo app to illustrate a pattern we can use for managing a resource's attachments when used with Active Storage.  Uses a contrived example where we model a wallet that has a single driver license and many credit cards.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Full blog post describing this can be found here at [http://ruby.zigzo.com/2018/08/13/a-convention-for-active-storage-attachment-management/](http://ruby.zigzo.com/2018/08/13/a-convention-for-active-storage-attachment-management/)
