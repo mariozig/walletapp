@@ -18,8 +18,14 @@
 
 <p>
   <strong>Credit Cards:</strong>
-  <% @wallet.credit_cards.each do |credit_card| %>
-    <%= image_tag credit_card.variant(resize: "470x300>"), alt: credit_card.filename %>
+  <% if @wallet.credit_cards.attached? %>
+    <% @wallet.credit_cards.each do |credit_card| %>
+      <%= image_tag credit_card.variant(resize: "470x300>"), alt: credit_card.filename %>
+      <br />
+      <%= link_to "Remove", wallet_credit_card_path(@wallet, credit_card), method: :delete %>
+    <% end %>
+  <% else %>
+    Wallet has no credit cards.
   <% end %>
 </p>
 
