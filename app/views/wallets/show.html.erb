@@ -7,7 +7,13 @@
 
 <p>
   <strong>Driver License:</strong>
-  <%= image_tag @wallet.driver_license.variant(resize: "500x500"), alt: @wallet.driver_license.filename %>
+  <% if @wallet.driver_license.attached? %>
+    <%= image_tag @wallet.driver_license.variant(resize: "500x500"), alt: @wallet.driver_license.filename %>
+    <br />
+    <%= link_to "Remove", wallet_driver_license_path(@wallet, @wallet.driver_license.id), method: :delete %>
+  <% else %>
+    Wallet has no driver license.
+  <% end %>
 </p>
 
 <p>
