@@ -5,5 +5,10 @@
   <%= @wallet.brand %>
 </p>
 
+<p>
+  <strong>Driver License:</strong>
+  <%= image_tag @wallet.driver_license.variant(resize: "500x500"), alt: @wallet.driver_license.filename %>
+</p>
+
 <%= link_to 'Edit', edit_wallet_path(@wallet) %> |
 <%= link_to 'Back', wallets_path %>
